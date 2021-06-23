@@ -2,7 +2,7 @@ import './WarehouseDetails.scss';
 
 export default function WarehouseDetails(props) {
 
-    const {address, city, country, id, name, contact} = props.info;
+    const {address, city, country, contact} = props.info;
 
     return (
         <section className="warehouse-details">
