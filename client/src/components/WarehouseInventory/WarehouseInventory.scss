@@ -1,0 +1,127 @@
+@import '../../partials/_mixins.scss';
+@import '../../partials/_variables.scss';
+
+.warehouse-inventory {
+    position: relative;
+    width: 91%;
+    height: 2092px;
+    margin: 0 auto;
+
+    @include tablet {
+        width: 91%;
+        height: 605px;
+    }
+        
+    @include desktop {
+        width: 1020px;
+    }
+
+    &__container {
+        width: 100%;
+        padding-top: 32px;
+        background-color: $white;
+        margin: 0 auto;
+        border: 1px solid $light-grey;
+        overflow: scroll;
+        box-shadow: 0px 2px 5px rgba(19, 24, 44, 0.1);
+        border-radius: 3px;
+        position: absolute;
+        top: -70px;
+
+        @include tablet {
+            width: 100%;
+            top: -100px;
+            overflow: visible;
+        }
+
+        @include desktop {
+            width: 100%;
+            top: -100px;
+        }
+    }
+    
+    &__header {
+        @include wrapper;
+        padding-bottom: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+
+        @include tablet {
+            padding-bottom: 22px;
+        }
+    }
+
+    &__title {
+        @include page-title;
+        //get the "back" arrow aligned properly
+        display: flex;
+        align-items: baseline;
+    }
+
+    &__back-icon {
+        @include back-icon;
+    }
+
+    &__button {
+        @include edit-button;
+    }
+
+    &__button-image {
+        height: 18px;
+        width: 18px;
+    }
+
+    &__button-text {
+        display: none;
+
+        @include tablet {
+            display: inline-block;
+            margin-left: 6px;
+        }
+    }
+
+    &__heading-container {
+        display: none;
+        
+        @include tablet {
+            @include table-heading;
+            @include wrapper;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+            background-color: $light-grey;
+        }
+    }
+
+    &__table-heading {
+        display: flex;
+        align-items: center;
+
+        @include desktop {
+            width: 80px;
+        }
+
+        &--item {
+            width: 130px;
+
+            @include desktop {
+                width: 140px;
+            }
+        }
+    }
+
+    &__table {
+        @include tablet {
+            height: 471px;
+            overflow: scroll;
+        }
+
+        @include desktop {
+            height: 511px;
+            overflow: scroll;
+        }
+    }
+}

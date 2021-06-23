@@ -1,0 +1,69 @@
+@import '../../partials/variables';
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+
+.navbar{
+    height: 200px;
+    margin: 0 auto;
+    @include sideSpecs; 
+    @include tablet{
+        height: 186px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    @include desktop {
+        width: 1280px;
+    }
+    
+    &__container {
+        background-color: $graphite;
+        width: 100%;
+    }
+    
+    &__logo{
+        margin: 2rem 0 1rem 0 ;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        @include tablet{ 
+            margin: 0;
+            position: relative;
+            bottom: 3rem;
+        }
+        
+    }
+    &__link{
+        display: flex;
+        align-self: center;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    &__item{
+        color: $cloud;
+        padding: 0.5rem 3.2rem;  
+        @include buttons; 
+        @include tablet{ 
+            padding: 0.5rem 1rem;
+            position: relative;
+            bottom: 3rem;
+        }
+    
+    }
+    .is-active{
+        border:1px solid $instock-black;
+        background-color: $instock-black;
+        border-radius:20px;
+        color: $white; 
+        @include tablet{
+            border-radius: 20px;
+        }
+    }
+    
+}

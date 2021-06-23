@@ -1,0 +1,216 @@
+@import "../../partials/variables";
+@import "../../partials/fonts";
+@import "../../partials/mixins";
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-family: $font-semi-bold;
+  width: 100%;
+}
+label {
+  font-size: 13px;
+  margin-top: 16px;
+
+  @include tablet {
+    margin-top: 24px;
+  }
+
+  @include desktop {
+    margin-top: 46px;
+  }
+}
+.warehouse-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $white;
+
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &__title {
+    font-family: $font-semi-bold;
+    border-bottom: solid 1px $cloud;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 24px;
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 0;
+
+    @include tablet {
+      text-align: initial;
+      padding-left: 24px;
+      width: 100%;
+    }
+  }
+  &__sub-title {
+    font-family: $font-semi-bold;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    margin-top: 16px;
+
+    @include tablet {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 24px;
+      margin-left: 0;
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+  &__form {
+    width: 100%;
+  }
+
+  &__container {
+    width: 100%;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      margin-top: 24px;
+      justify-content: center;
+    }
+  }
+
+  &__details {
+    border-bottom: solid 1px $cloud;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-bottom: 24px;
+
+    @include tablet {
+      border-bottom: none;
+      border-right: solid 1px $cloud;
+      margin-right: 31px;
+      width: 50%;
+      margin-left: 24px;
+    }
+    @include desktop {
+      padding-right: 40px;
+      padding-left: 40px;
+      margin-left: 0;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+
+    @include tablet {
+      width: 50%;
+    }
+    @include desktop {
+      padding-right: 40px;
+      padding-left: 0;
+    }
+  }
+
+  &__label {
+    font-family: $font-semi-bold;
+    margin-bottom: 4px;
+    font-size: 13px;
+
+    @include tablet {
+      margin-top: 24px;
+    }
+  }
+  &__input {
+    border-radius: 20px;
+    border: solid 1px $cloud;
+    width: 90%;
+    height: 36px;
+    font-family: $font-regular;
+    padding: 2px 16px;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      border: solid 1px $instock-indigo;
+    }
+
+    @include tablet {
+      width: 90%;
+    }
+
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__buttons {
+    height: 68px;
+    background-color: $light-grey;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1rem;
+
+    @include tablet {
+      justify-content: flex-end;
+    }
+  }
+
+  &__button-add {
+    font-family: $font-regular;
+    background-color: $instock-indigo;
+    color: $white;
+    border-radius: 20px;
+    width: 140px;
+    height: 36px;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: $instock-black;
+      columns: $white;
+    }
+
+    @include tablet {
+      margin-right: 16px;
+      margin-left: 16px;
+    }
+    @include desktop {
+      margin-right: 35px;
+    }
+  }
+
+  &__button-cancel {
+    font-family: $font-regular;
+    border-radius: 20px;
+    width: 140px;
+    height: 36px;
+    border: solid 1px $cloud;
+    background-color: $white;
+    color: $cloud;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $instock-black;
+
+    &:hover {
+      border: solid 1px $instock-indigo;
+      color: $instock-indigo;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.add-error__input {
+  border: solid 2px $red;
+}

@@ -1,0 +1,17 @@
+@import '../../partials/_mixins.scss';
+@import '../../partials/_variables.scss';
+
+.inventory-item {
+    position: relative;
+    margin: 0 auto;
+    width: 91%;
+    height: 365px;
+
+    @include tablet {
+        height: auto;
+    }
+
+    @include desktop {
+        width: 1020px;
+    }
+}

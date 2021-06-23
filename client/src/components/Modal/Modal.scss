@@ -1,0 +1,151 @@
+@import '../../partials/_mixins.scss';
+@import '../../partials/_variables.scss';
+
+.modal-wrapper{
+
+    @include tablet{ 
+
+
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0; 
+        &::before{
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            top: 0 ;
+            left: 0; 
+            background-color: rgba($color: $instock-black, $alpha: 0.7);
+            z-index: 1000;
+
+        }
+        
+        
+    }
+}
+
+.modal{ 
+
+    background-color :white; 
+    
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include tablet{ 
+        border-radius: 8px;
+        width: 87.5vw;
+        height: 40vh;
+        left: 6%; 
+        top: 27.5%;
+        z-index: 1000;
+        
+    }
+    @media (min-width:820px) {
+        left: 7%;
+    }
+    @media (min-width:900px) {
+        left: 12%;
+    }
+    @media (min-width:1000px) {
+        left: 12%;
+    }
+
+    
+    @include desktop{ 
+        width: 87.5vw;
+        height: 40vh;
+        left: 20vw; 
+        top: 27.5%;
+        
+    }
+
+   
+
+    &__close{ 
+        align-self: flex-end;
+        cursor: pointer;
+        margin-top: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    &__title{
+        @include page-title;
+        position: relative;
+        bottom: 7rem;
+        margin-left: 1rem;
+        @include tablet{ 
+            position: relative;
+            bottom: 3rem;
+            margin-left: 4rem;
+        }
+    }
+    &__body{
+        @include p1;
+        position: relative;
+        bottom: 15rem;
+        margin: 0 1rem;
+        @include tablet{ 
+            position: relative;
+            bottom: 3.5rem;
+            margin: 0 4rem;
+            padding-right: 3rem;
+        }
+    }
+
+    &__delete{
+        background: $red;
+        border-radius: 20px;
+        padding: 8px 63px;
+        @include list-paragraph; 
+        color: $white;
+        @include tablet{ 
+            padding: 8px 16px;
+        }
+
+    }
+    &__cancel{
+        background-color: $white;
+        @include list-paragraph; 
+        color: $slate; 
+        padding: 8px 63px;
+        border: 1px solid $cloud;
+        // box-sizing: border-box;
+        border-radius: 20px;
+        margin-right: 1rem;
+        cursor: pointer;
+        margin-left: 1rem;
+        @include tablet{ 
+            padding: 8px 16px;
+        }
+    }
+
+    &__footer{
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        margin-bottom: 1.5rem;
+        @include tablet{ 
+            position: relative;
+            bottom: 1rem;
+            left: 28rem;
+        }
+    }
+    
+
+}
+
+.display-none {
+    display: none;
+    // opacity: 60%;
+  }

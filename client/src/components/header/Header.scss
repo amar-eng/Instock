@@ -1,0 +1,15 @@
+@import '../../partials/variables';
+@import '../../partials/fonts';
+@import '../../partials/mixins';
+
+
+.header{ 
+   
+    @include header;
+    @include headerSpecs;
+    color: $instock-black;
+    @include tablet{
+        position: relative;
+        bottom: 1rem;
+    }
+}

@@ -1,0 +1,113 @@
+@import '../../partials/_mixins.scss';
+@import '../../partials/_variables.scss';
+
+.warehouse {
+    @include wrapper;
+    @include divider-top;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    @include tablet {
+        @include divider-bottom;
+        border-top: none;
+        
+        .warehouse__container:nth-child(n+2) {
+            width: 100px;
+        }
+
+        .warehouse__container:last-child {
+            width: 60px;
+        }
+
+        .warehouse__container:nth-of-type(1) { order: 1; }
+        .warehouse__container:nth-of-type(3) { order: 2; }
+        .warehouse__container:nth-of-type(2) { order: 3; }
+        .warehouse__container:nth-of-type(4) { order: 4; }
+        .warehouse__container:nth-of-type(5) { order: 6; }
+        
+    }
+
+    @include desktop {
+        .warehouse__container:nth-child(n+2) {
+            width: 80px;
+        }
+    }
+
+    &__container {
+        width: 140px;
+        margin-bottom: 16px;
+
+
+        @include tablet {
+            width: 15vw;
+        }
+
+        @include desktop {
+           width: 8.5vw;
+        }
+
+        &--margin {
+            margin-left: auto;
+
+            @include tablet {
+                margin-left: 0;
+            }
+        }
+
+        &--buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__label {
+        @include label;
+        margin-bottom: 4px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__link {
+        @include list-link;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    &__paragraph {
+        @include list-paragraph;
+        @include tablet{
+            width: 115px;
+        }
+        &--address{
+            @include desktop{
+                width: 250px;
+                // margin-left: 1rem;
+                // position: relative;
+                // right: 6%;
+                // z-index: 0;
+            }
+        }
+       &--name{
+        @include tablet{
+                margin: 0 1rem;
+                
+        }
+        @include desktop{
+            margin-left: 3rem;
+        }
+       }
+    }
+
+    &__button {
+        background-color: $white;
+        border: 0;
+    }
+}
