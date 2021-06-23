@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Navbar from "./components/navbar/Navbar";
 import WarehouseAdd from "./components/WarehouseAdd/WarehouseAdd";
@@ -14,7 +14,7 @@ import HomePage from './components/Homepage/HomePage';
 function App() {
   return (
     <div className='app-container'>
-      <BrowserRouter>
+      <Router>
         <Navbar />
         <Switch>
           <Route path='/' exact component={HomePage} />
@@ -34,7 +34,7 @@ function App() {
           <Route path="/inventory/:itemid" component={InventoryItem} />
           
         </Switch>
-      </BrowserRouter>
+      </Router>
       <h2 className='app-container__copyright'>© InStock Inc. All Rights Reserved.</h2>
     </div>
   );
