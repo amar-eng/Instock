@@ -1,5 +1,5 @@
-@import "./partials/_variables.scss";
-@import "./partials/_mixins.scss";
+@import './partials/_variables.scss';
+@import './partials/_mixins.scss';
 
 /********************* CSS RESETS AND DEFAULTS *********************/
 
@@ -52,11 +52,11 @@ body {
     text-align: center;
 
     @include tablet {
-      margin-top: 780px;
+      margin-top: 200px;
     }
 
     @include desktop {
-      margin-top: 673px;
+      margin-top: 220px;
     }
   }
 }
