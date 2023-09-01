@@ -25,12 +25,10 @@ function HomePage() {
   };
 
   const sortTable = (column, column2) => {
-    // Conditionals
     const isColumn = sortColumn === column;
     const isAscending = sortOrder === 'asc';
     const isColumnAsc = isColumn && isAscending;
 
-    // Validate column being clicked to dictate sorting order and update state
     if (!isColumn || isColumnAsc) {
       const sortArr = sortingData(warehouseList, column, 'asc', column2);
       setWarehouseList(sortArr);
@@ -54,11 +52,11 @@ function HomePage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Filter the warehouseList based on searchText and the 'name' property
+
     const filteredList = warehouseList.filter((item) =>
       item.name.toLowerCase().includes(searchText.toLowerCase())
     );
-    setWarehouseList([...filteredList]); // Use the spread operator to create a new array
+    setWarehouseList([...filteredList]);
   };
 
   return (

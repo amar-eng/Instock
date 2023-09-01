@@ -26,12 +26,10 @@ function TotalInventory() {
   const sortTable = (column) => {
     const inventoryData = inventoryList;
 
-    // Conditionals
     const isColumn = sortColumn === column;
     const isAscending = sortOrder === 'asc';
     const isColumnAsc = isColumn && isAscending;
 
-    // Validate column being clicked to dictate sorting order and update state
     if (!isColumn || isColumnAsc) {
       const sortArr = sortingData(inventoryData, column, 'asc');
       setInventoryList(sortArr);
@@ -55,11 +53,11 @@ function TotalInventory() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Filter the inventoryList based on searchText
+
     const filteredList = inventoryList.filter((item) =>
       item.itemName.toLowerCase().includes(searchText.toLowerCase())
     );
-    setInventoryList([...filteredList]); // Use the spread operator to create a new array
+    setInventoryList([...filteredList]);
   };
 
   return (
