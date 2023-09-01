@@ -76,6 +76,12 @@
   }
 }
 
+@mixin search-bar-input {
+  border: none;
+  outline: none;
+  height: 36px;
+}
+
 @mixin add-button {
   font-family: $font-regular;
   background-color: $instock-indigo;
@@ -126,7 +132,7 @@
   font-weight: 600;
   line-height: 20px;
 
-  @include tablet{
+  @include tablet {
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -191,24 +197,24 @@
   }
 }
 
-//  Use this to get the side specs at different break-points 
-@mixin sideSpecs{ 
+//  Use this to get the side specs at different break-points
+@mixin sideSpecs {
   padding: 0 1rem;
   @media (min-width: $tablet-breakpoint) {
     padding: 0 2rem;
   }
   @media (min-width: $desktop-breakpoint) {
-    padding:0 8.125rem ;
+    padding: 0 8.125rem;
   }
 }
 
-// Use this When applying the specs for the Card titles at different breakpoint (i.e Warehouses, Inventory etc) 
-@mixin headerSpecs{
-  padding-left:1.5rem;
-  padding-top: 2rem; 
+// Use this When applying the specs for the Card titles at different breakpoint (i.e Warehouses, Inventory etc)
+@mixin headerSpecs {
+  padding-left: 1.5rem;
+  padding-top: 2rem;
 }
 
-// Specs for the searchbar 
-@mixin searchSpecs{ 
-  margin:0 1.5rem;
+// Specs for the searchbar
+@mixin searchSpecs {
+  margin: 0 1.5rem;
 }

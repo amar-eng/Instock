@@ -628,5 +628,15 @@
         "category": "Accessories",
         "status": "In Stock",
         "quantity": 1
+    },
+    {
+        "id": "d4456876-8156-413b-a97e-468949319c36",
+        "warehouseID": "2922c286-16cd-4d43-ab98-c79f698aeab0",
+        "warehouseName": "Manhattan",
+        "itemName": "Under Armor Bag",
+        "description": "This is an underarmor bag",
+        "category": "Apparel",
+        "status": "In Stock",
+        "quantity": 12
     }
 ]
