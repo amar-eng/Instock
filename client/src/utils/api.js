@@ -1,1 +1,1 @@
-export const API_URL = 'https://instock-third-deployment.onrender.com/';
+export const API_URL = 'https://instock-sep2-deployment.onrender.com/';
